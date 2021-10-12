@@ -8,15 +8,15 @@
 
 | 表名                  | 说明       |
 | :---: | :---: |
-| [collection](#collection) |  |
-| [contest](#contest) |  |
+| [collection](#collection) | 个人收藏表 |
+| [contest](#contest) | 竞赛活动表 |
 | [contest_board](#contest_board) | 竞赛活动公告栏 |
-| [reply](#reply) |  |
+| [reply](#reply) | 讨论区回帖表 |
 | [sys_role](#sys_role) | 角色信息表 |
-| [sys_user](#sys_user) |  |
-| [team](#team) |  |
-| [team_user](#team_user) |  |
-| [topic](#topic) |  |
+| [sys_user](#sys_user) | 用户表 |
+| [team](#team) | 组队信息表 |
+| [team_user](#team_user) | 组队-用户关联表 |
+| [topic](#topic) | 主题帖表 |
 
 **表名：** <a id="collection">collection</a>
 
