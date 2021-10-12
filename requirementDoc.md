@@ -49,9 +49,8 @@ F. 项目简介:
 
 ## 1.用例图
 
-![用例图](https://raw.githubusercontent.com/Myfootnotsmelly/IContest_page/main/img/ContestMapper.png)
+![用例图](https://raw.githubusercontent.com/Myfootnotsmelly/IContest_page/main/img/usecase.jpg)
 
-![用例图.jpg](https://cdn.nlark.com/yuque/0/2021/jpeg/22757274/1632276201346-991a967b-c7a6-4252-ba12-2281877f3405.jpeg#clientId=u87d2c8ed-1e45-4&from=ui&height=839&id=u97388c85&margin=%5Bobject%20Object%5D&name=%E7%94%A8%E4%BE%8B%E5%9B%BE.jpg&originHeight=1889&originWidth=2181&originalType=binary&ratio=1&size=355968&status=done&style=none&taskId=u6cd7f08d-a5fc-46fb-b9b0-37ce36cd762&width=969)
 ## 2.用例的概要描述
 | 参与者​ | **需求** | **简要说明** | **优先级** |
 | --- | --- | --- | --- |
