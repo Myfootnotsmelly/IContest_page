@@ -21,6 +21,10 @@
                 
             
                 
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-page-treeview/style.css">
+                
+            
+                
                 <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
                 
             
@@ -60,6 +64,8 @@
     <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
+    
+    <link rel="next" href="IContest数据库设计文档v1.1.html" />
     
     
     <link rel="prev" href="requirementDoc.html" />
@@ -136,6 +142,21 @@
             
         </li>
     
+        <li class="chapter " data-level="1.4" data-path="IContest数据库设计文档v1.1.html">
+            
+                <a href="IContest数据库设计文档v1.1.html">
+            
+                    
+                        <b>1.4.</b>
+                    
+                    数据库文档
+            
+                </a>
+            
+
+            
+        </li>
+    
 
     
 
@@ -181,7 +202,87 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x7B2C;&#x4E00;&#x90E8;&#x5206;-&#x5F15;&#x8A00;">&#x7B2C;&#x4E00;&#x90E8;&#x5206; &#x5F15;&#x8A00;</h1>
+                                <div class="treeview__container"><div class="treeview__container-title"><span class="treeview__main-title">Treeview</span><span class="treeview__copyright">Copyright &#xA9; aleen42 all right reserved, powered by <a href="https://github.com/aleen42" target="_blank" _target="blank">aleen42</a></span></div><ul>
+<li><div><a href="#&#x7B2C;&#x4E00;&#x90E8;&#x5206;-&#x5F15;&#x8A00;">&#x7B2C;&#x4E00;&#x90E8;&#x5206; &#x5F15;&#x8A00;</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute(&apos;state&apos;);var nextState = curState === &apos;opened&apos; ? &apos;hidden&apos; : &apos;opened&apos;;this.setAttribute(&apos;state&apos;, nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === &apos;hidden&apos;) {    list.style.display = &apos;none&apos;;} else {    list.style.display = &apos;block&apos;;}"></i></div>
+<ul>
+<li><div><a href="#&#x4E00;&#x3001;&#x7F16;&#x5199;&#x76EE;&#x7684;">&#x4E00;&#x3001;&#x7F16;&#x5199;&#x76EE;&#x7684;</a><i></i></div></li>
+<li><div><a href="#&#x4E8C;&#x3001;&#x8BFB;&#x8005;&#x5BF9;&#x8C61;">&#x4E8C;&#x3001;&#x8BFB;&#x8005;&#x5BF9;&#x8C61;</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#&#x7B2C;&#x4E8C;&#x90E8;&#x5206;-&#x9879;&#x76EE;&#x6982;&#x8FF0;">&#x7B2C;&#x4E8C;&#x90E8;&#x5206; &#x9879;&#x76EE;&#x6982;&#x8FF0;</a><i></i></div></li>
+<li><div><a href="#&#x7B2C;&#x4E09;&#x90E8;&#x5206;-&#x8BBE;&#x8BA1;&#x7EA6;&#x675F;">&#x7B2C;&#x4E09;&#x90E8;&#x5206; &#x8BBE;&#x8BA1;&#x7EA6;&#x675F;</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute(&apos;state&apos;);var nextState = curState === &apos;opened&apos; ? &apos;hidden&apos; : &apos;opened&apos;;this.setAttribute(&apos;state&apos;, nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === &apos;hidden&apos;) {    list.style.display = &apos;none&apos;;} else {    list.style.display = &apos;block&apos;;}"></i></div>
+<ul>
+<li><div><a href="#&#x4E00;&#x3001;&#x9700;&#x6C42;&#x7EA6;&#x675F;">&#x4E00;&#x3001;&#x9700;&#x6C42;&#x7EA6;&#x675F;</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute(&apos;state&apos;);var nextState = curState === &apos;opened&apos; ? &apos;hidden&apos; : &apos;opened&apos;;this.setAttribute(&apos;state&apos;, nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === &apos;hidden&apos;) {    list.style.display = &apos;none&apos;;} else {    list.style.display = &apos;block&apos;;}"></i></div>
+<ul>
+<li> 
+<ul>
+<li><div><a href="#1&#x3001;&#x672C;&#x7CFB;&#x7EDF;&#x5E94;&#x5F53;&#x9075;&#x5FAA;&#x7684;&#x6280;&#x672F;&#x6807;&#x51C6;">1&#x3001;&#x672C;&#x7CFB;&#x7EDF;&#x5E94;&#x5F53;&#x9075;&#x5FAA;&#x7684;&#x6280;&#x672F;&#x6807;&#x51C6;</a><i></i></div></li>
+<li><div><a href="#2&#x3001;&#x8F6F;&#x3001;&#x786C;&#x4EF6;&#x73AF;&#x5883;&#x6807;&#x51C6;">2&#x3001;&#x8F6F;&#x3001;&#x786C;&#x4EF6;&#x73AF;&#x5883;&#x6807;&#x51C6;</a><i></i></div></li>
+<li><div><a href="#3&#x3001;&#x7528;&#x6237;&#x754C;&#x9762;&#x6807;&#x51C6;">3&#x3001;&#x7528;&#x6237;&#x754C;&#x9762;&#x6807;&#x51C6;</a><i></i></div></li>
+<li><div><a href="#4&#x3001;&#x8F6F;&#x4EF6;&#x8D28;&#x91CF;">4&#x3001;&#x8F6F;&#x4EF6;&#x8D28;&#x91CF;</a><i></i></div></li>
+</ul></li>
+</ul></li>
+<li><div><a href="#&#x4E8C;&#x3001;&#x7F16;&#x7801;&#x89C4;&#x7EA6;">&#x4E8C;&#x3001;&#x7F16;&#x7801;&#x89C4;&#x7EA6;</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute(&apos;state&apos;);var nextState = curState === &apos;opened&apos; ? &apos;hidden&apos; : &apos;opened&apos;;this.setAttribute(&apos;state&apos;, nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === &apos;hidden&apos;) {    list.style.display = &apos;none&apos;;} else {    list.style.display = &apos;block&apos;;}"></i></div>
+<ul>
+<li><div><a href="#1&#x547D;&#x540D;&#x98CE;&#x683C;">1.&#x547D;&#x540D;&#x98CE;&#x683C;</a><i></i></div></li>
+<li><div><a href="#2&#x6570;&#x636E;&#x5E93;&#x5EFA;&#x8868;&#x89C4;&#x7EA6;">2.&#x6570;&#x636E;&#x5E93;&#x5EFA;&#x8868;&#x89C4;&#x7EA6;</a><i></i></div></li>
+</ul></li>
+</ul></li>
+<li><div><a href="#&#x7B2C;&#x56DB;&#x90E8;&#x5206;-&#x56FE;&#x8868;">&#x7B2C;&#x56DB;&#x90E8;&#x5206; &#x56FE;&#x8868;</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute(&apos;state&apos;);var nextState = curState === &apos;opened&apos; ? &apos;hidden&apos; : &apos;opened&apos;;this.setAttribute(&apos;state&apos;, nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === &apos;hidden&apos;) {    list.style.display = &apos;none&apos;;} else {    list.style.display = &apos;block&apos;;}"></i></div>
+<ul>
+<li><div><a href="#&#x4E00;&#x3001;&#x6570;&#x636E;&#x5E93;&#x6A21;&#x578B;&#x56FE;">&#x4E00;&#x3001;&#x6570;&#x636E;&#x5E93;&#x6A21;&#x578B;&#x56FE;</a><i></i></div></li>
+<li><div><a href="#&#x4E8C;&#x3001;-&#x7C7B;&#x56FE;">&#x4E8C;&#x3001; &#x7C7B;&#x56FE;</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#&#x7B2C;&#x4E94;&#x90E8;&#x5206;--icontest&#x5E73;&#x53F0;&#x65B9;&#x6848;&#x8BBE;&#x8BA1;">&#x7B2C;&#x4E94;&#x90E8;&#x5206;  IContest&#x5E73;&#x53F0;&#x65B9;&#x6848;&#x8BBE;&#x8BA1;</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute(&apos;state&apos;);var nextState = curState === &apos;opened&apos; ? &apos;hidden&apos; : &apos;opened&apos;;this.setAttribute(&apos;state&apos;, nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === &apos;hidden&apos;) {    list.style.display = &apos;none&apos;;} else {    list.style.display = &apos;block&apos;;}"></i></div>
+<ul>
+<li><div><a href="#&#x4E00;&#x3001;&#x4E1A;&#x52A1;&#x529F;&#x80FD;&#x6982;&#x8981;&#x7ED3;&#x6784;">&#x4E00;&#x3001;&#x4E1A;&#x52A1;&#x529F;&#x80FD;&#x6982;&#x8981;&#x7ED3;&#x6784;</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute(&apos;state&apos;);var nextState = curState === &apos;opened&apos; ? &apos;hidden&apos; : &apos;opened&apos;;this.setAttribute(&apos;state&apos;, nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === &apos;hidden&apos;) {    list.style.display = &apos;none&apos;;} else {    list.style.display = &apos;block&apos;;}"></i></div>
+<ul>
+<li><div><a href="#1-&#x4E2A;&#x4EBA;&#x8D26;&#x6237;&#x7BA1;&#x7406;&#x6A21;&#x5757;">1. &#x4E2A;&#x4EBA;&#x8D26;&#x6237;&#x7BA1;&#x7406;&#x6A21;&#x5757;</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute(&apos;state&apos;);var nextState = curState === &apos;opened&apos; ? &apos;hidden&apos; : &apos;opened&apos;;this.setAttribute(&apos;state&apos;, nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === &apos;hidden&apos;) {    list.style.display = &apos;none&apos;;} else {    list.style.display = &apos;block&apos;;}"></i></div>
+<ul>
+<li><div><a href="#11-&#x6CE8;&#x518C;">1.1 &#x6CE8;&#x518C;</a><i></i></div></li>
+<li><div><a href="#12-&#x767B;&#x9646;">1.2 &#x767B;&#x9646;</a><i></i></div></li>
+<li><div><a href="#13-&#x4E2A;&#x4EBA;&#x4FE1;&#x606F;&#x7EF4;&#x62A4;">1.3 &#x4E2A;&#x4EBA;&#x4FE1;&#x606F;&#x7EF4;&#x62A4;</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#2&#x7ADE;&#x8D5B;&#x6D3B;&#x52A8;&#x722C;&#x866B;&#x6A21;&#x5757;">2.&#x7ADE;&#x8D5B;&#x6D3B;&#x52A8;&#x722C;&#x866B;&#x6A21;&#x5757;</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute(&apos;state&apos;);var nextState = curState === &apos;opened&apos; ? &apos;hidden&apos; : &apos;opened&apos;;this.setAttribute(&apos;state&apos;, nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === &apos;hidden&apos;) {    list.style.display = &apos;none&apos;;} else {    list.style.display = &apos;block&apos;;}"></i></div>
+<ul>
+<li><div><a href="#21-&#x7ADE;&#x8D5B;&#x722C;&#x866B;">2.1 &#x7ADE;&#x8D5B;&#x722C;&#x866B;</a><i></i></div></li>
+<li><div><a href="#22-&#x6821;&#x5185;&#x6D3B;&#x52A8;&#x722C;&#x866B;">2.2 &#x6821;&#x5185;&#x6D3B;&#x52A8;&#x722C;&#x866B;</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#3&#x5E73;&#x53F0;&#x5185;&#x5BB9;&#x6A21;&#x5757;">3.&#x5E73;&#x53F0;&#x5185;&#x5BB9;&#x6A21;&#x5757;</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute(&apos;state&apos;);var nextState = curState === &apos;opened&apos; ? &apos;hidden&apos; : &apos;opened&apos;;this.setAttribute(&apos;state&apos;, nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === &apos;hidden&apos;) {    list.style.display = &apos;none&apos;;} else {    list.style.display = &apos;block&apos;;}"></i></div>
+<ul>
+<li><div><a href="#31-&#x7ADE;&#x8D5B;&#x6A21;&#x5757;">3.1 &#x7ADE;&#x8D5B;&#x6A21;&#x5757;</a><i></i></div></li>
+<li><div><a href="#32-&#x6821;&#x5185;&#x6D3B;&#x52A8;&#x6A21;&#x5757;">3.2 &#x6821;&#x5185;&#x6D3B;&#x52A8;&#x6A21;&#x5757;</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#4&#x8BA8;&#x8BBA;&#x533A;&#x6A21;&#x5757;">4.&#x8BA8;&#x8BBA;&#x533A;&#x6A21;&#x5757;</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute(&apos;state&apos;);var nextState = curState === &apos;opened&apos; ? &apos;hidden&apos; : &apos;opened&apos;;this.setAttribute(&apos;state&apos;, nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === &apos;hidden&apos;) {    list.style.display = &apos;none&apos;;} else {    list.style.display = &apos;block&apos;;}"></i></div>
+<ul>
+<li><div><a href="#41-&#x53D1;&#x5E03;&#x4E3B;&#x9898;&#x5E16;">4.1 &#x53D1;&#x5E03;&#x4E3B;&#x9898;&#x5E16;</a><i></i></div></li>
+<li><div><a href="#42-&#x56DE;&#x590D;&#x4E3B;&#x9898;&#x5E16;">4.2 &#x56DE;&#x590D;&#x4E3B;&#x9898;&#x5E16;</a><i></i></div></li>
+<li><div><a href="#43-&#x56DE;&#x590D;&#x4E2A;&#x4EBA;&#x8BC4;&#x8BBA;">4.3 &#x56DE;&#x590D;&#x4E2A;&#x4EBA;&#x8BC4;&#x8BBA;</a><i></i></div></li>
+<li><div><a href="#44-&#x6536;&#x85CF;&#x5E16;&#x5B50;">4.4 &#x6536;&#x85CF;&#x5E16;&#x5B50;</a><i></i></div></li>
+<li><div><a href="#45-&#x67E5;&#x8BE2;&#x4E3B;&#x9898;&#x5E16;">4.5 &#x67E5;&#x8BE2;&#x4E3B;&#x9898;&#x5E16;</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#5&#x7EC4;&#x961F;&#x7CFB;&#x7EDF;&#x6A21;&#x5757;">5.&#x7EC4;&#x961F;&#x7CFB;&#x7EDF;&#x6A21;&#x5757;</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute(&apos;state&apos;);var nextState = curState === &apos;opened&apos; ? &apos;hidden&apos; : &apos;opened&apos;;this.setAttribute(&apos;state&apos;, nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === &apos;hidden&apos;) {    list.style.display = &apos;none&apos;;} else {    list.style.display = &apos;block&apos;;}"></i></div>
+<ul>
+<li><div><a href="#51-&#x67E5;&#x770B;&#x961F;&#x4F0D;&#x4FE1;&#x606F;">5.1 &#x67E5;&#x770B;&#x961F;&#x4F0D;&#x4FE1;&#x606F;</a><i></i></div></li>
+<li><div><a href="#52-&#x7533;&#x8BF7;&#x52A0;&#x5165;&#x961F;&#x4F0D;">5.2 &#x7533;&#x8BF7;&#x52A0;&#x5165;&#x961F;&#x4F0D;</a><i></i></div></li>
+<li><div><a href="#53-&#x521B;&#x5EFA;&#x65B0;&#x7684;&#x961F;&#x4F0D;">5.3 &#x521B;&#x5EFA;&#x65B0;&#x7684;&#x961F;&#x4F0D;</a><i></i></div></li>
+<li><div><a href="#54-&#x961F;&#x957F;&#x6DFB;&#x52A0;&#x6210;&#x5458;">5.4 &#x961F;&#x957F;&#x6DFB;&#x52A0;&#x6210;&#x5458;</a><i></i></div></li>
+<li><div><a href="#55-&#x961F;&#x957F;&#x5220;&#x9664;&#x6210;&#x5458;">5.5 &#x961F;&#x957F;&#x5220;&#x9664;&#x6210;&#x5458;</a><i></i></div></li>
+<li><div><a href="#56-&#x6210;&#x5458;&#x9000;&#x51FA;&#x961F;&#x4F0D;">5.6 &#x6210;&#x5458;&#x9000;&#x51FA;&#x961F;&#x4F0D;</a><i></i></div></li>
+<li><div><a href="#57-&#x961F;&#x957F;&#x4FEE;&#x6539;&#x961F;&#x4F0D;&#x4FE1;&#x606F;">5.7 &#x961F;&#x957F;&#x4FEE;&#x6539;&#x961F;&#x4F0D;&#x4FE1;&#x606F;</a><i></i></div></li>
+<li><div><a href="#58-&#x961F;&#x957F;&#x89E3;&#x6563;&#x961F;&#x4F0D;">5.8 &#x961F;&#x957F;&#x89E3;&#x6563;&#x961F;&#x4F0D;</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#6&#x5E73;&#x53F0;&#x7BA1;&#x7406;&#x6A21;&#x5757;">6.&#x5E73;&#x53F0;&#x7BA1;&#x7406;&#x6A21;&#x5757;</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute(&apos;state&apos;);var nextState = curState === &apos;opened&apos; ? &apos;hidden&apos; : &apos;opened&apos;;this.setAttribute(&apos;state&apos;, nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === &apos;hidden&apos;) {    list.style.display = &apos;none&apos;;} else {    list.style.display = &apos;block&apos;;}"></i></div>
+<ul>
+<li><div><a href="#61-&#x5E73;&#x53F0;&#x7ADE;&#x8D5B;&#x6D3B;&#x52A8;&#x5185;&#x5BB9;&#x7BA1;&#x7406;">6.1 &#x5E73;&#x53F0;&#x7ADE;&#x8D5B;&#x6D3B;&#x52A8;&#x5185;&#x5BB9;&#x7BA1;&#x7406;</a><i></i></div></li>
+<li><div><a href="#62-&#x5E73;&#x53F0;&#x8BA8;&#x8BBA;&#x533A;&#x7BA1;&#x7406;">6.2 &#x5E73;&#x53F0;&#x8BA8;&#x8BBA;&#x533A;&#x7BA1;&#x7406;</a><i></i></div></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+
+<p><strong>IContest&#x7CFB;&#x7EDF;&#x8BBE;&#x8BA1;&#x6587;&#x6863;</strong></p>
+<h1 id="&#x7B2C;&#x4E00;&#x90E8;&#x5206;-&#x5F15;&#x8A00;">&#x7B2C;&#x4E00;&#x90E8;&#x5206; &#x5F15;&#x8A00;</h1>
 <h2 id="&#x4E00;&#x3001;&#x7F16;&#x5199;&#x76EE;&#x7684;">&#x4E00;&#x3001;&#x7F16;&#x5199;&#x76EE;&#x7684;</h2>
 <p>&#x7F16;&#x5199;&#x672C;&#x6587;&#x7684;&#x4E3B;&#x8981;&#x76EE;&#x7684;&#x662F;&#x628A;&#x9700;&#x6C42;&#x5206;&#x6790;&#x5F97;&#x5230;&#x7684;&#x7528;&#x4F8B;&#x6A21;&#x578B;&#x8F6C;&#x6362;&#x4E3A;&#x8F6F;&#x4EF6;&#x7ED3;&#x6784;&#x548C;&#x6570;&#x636E;&#x7ED3;&#x6784;&#x3002;&#x8BBE;&#x8BA1;&#x8F6F;&#x4EF6;&#x7ED3;&#x6784;&#x7684;&#x5177;&#x4F53;&#x4EFB;&#x52A1;&#x662F;&#xFF1A;&#x5C06;&#x4E00;&#x4E2A;&#x590D;&#x6742;&#x7CFB;&#x7EDF;&#x6309;&#x529F;&#x80FD;&#x8FDB;&#x884C;&#x6A21;&#x5757;&#x5212;&#x5206;&#x3001;&#x5EFA;&#x7ACB;&#x6A21;&#x5757;&#x7684;&#x5C42;&#x6B21;&#x7ED3;&#x6784;&#x53CA;&#x8C03;&#x7528;&#x5173;&#x7CFB;&#x3001;&#x786E;&#x5B9A;&#x6A21;&#x5757;&#x95F4;&#x7684;&#x63A5;&#x53E3;&#x53CA;&#x4EBA;&#x673A;&#x754C;&#x9762;&#x7B49;&#x3002;&#x6570;&#x636E;&#x7ED3;&#x6784;&#x8BBE;&#x8BA1;&#x5305;&#x62EC;&#x6570;&#x636E;&#x7279;&#x5F81;&#x7684;&#x63CF;&#x8FF0;&#x3001;&#x786E;&#x5B9A;&#x6570;&#x636E;&#x7684;&#x7ED3;&#x6784;&#x7279;&#x6027;&#x3001;&#x4EE5;&#x53CA;&#x6570;&#x636E;&#x5E93;&#x7684;&#x8BBE;&#x8BA1;&#x3002;
 &#x672C;&#x8BBE;&#x8BA1;&#x662F;&#x6307;&#x5BFC;&#x6982;&#x8981;&#x8BBE;&#x8BA1;&#x3001;&#x8BE6;&#x7EC6;&#x8BBE;&#x8BA1;&#x548C;&#x9879;&#x76EE;&#x5B9E;&#x65BD;&#x7684;&#x91CD;&#x8981;&#x6307;&#x5BFC;&#x6027;&#x6587;&#x4EF6;&#xFF0C;&#x4E5F;&#x662F;&#x8FDB;&#x884C;&#x7CFB;&#x7EDF;&#x96C6;&#x6210;&#x6D4B;&#x8BD5;&#x548C;&#x91CD;&#x8981;&#x4F9D;&#x636E;&#x3002;</p>
@@ -221,6 +322,11 @@
 2.2 &#x8868;&#x540D;&#x4E0D;&#x4F7F;&#x7528;&#x590D;&#x6570;&#x540D;&#x8BCD;&#x3002; 
 &#x4E0D;&#x80FD;&#x4EE5;</p>
 <h1 id="&#x7B2C;&#x56DB;&#x90E8;&#x5206;-&#x56FE;&#x8868;">&#x7B2C;&#x56DB;&#x90E8;&#x5206; &#x56FE;&#x8868;</h1>
+<h2 id="&#x4E00;&#x3001;&#x6570;&#x636E;&#x5E93;&#x6A21;&#x578B;&#x56FE;">&#x4E00;&#x3001;&#x6570;&#x636E;&#x5E93;&#x6A21;&#x578B;&#x56FE;</h2>
+<p><img src="https://raw.githubusercontent.com/Myfootnotsmelly/IContest_page/main/img/dbModel.png" alt=""></p>
+<h2 id="&#x4E8C;&#x3001;-&#x7C7B;&#x56FE;">&#x4E8C;&#x3001; &#x7C7B;&#x56FE;</h2>
+<p><img src="https://raw.githubusercontent.com/Myfootnotsmelly/IContest_page/main/img/ContestServiceImpl.png" alt="Service&#x5C42;&#x7C7B;&#x56FE;"></p>
+<p><img src="https://raw.githubusercontent.com/Myfootnotsmelly/IContest_page/main/img/ContestMapper.png" alt="Dao&#x5C42;&#x7C7B;&#x56FE;"></p>
 <h1 id="&#x7B2C;&#x4E94;&#x90E8;&#x5206;--icontest&#x5E73;&#x53F0;&#x65B9;&#x6848;&#x8BBE;&#x8BA1;">&#x7B2C;&#x4E94;&#x90E8;&#x5206;  IContest&#x5E73;&#x53F0;&#x65B9;&#x6848;&#x8BBE;&#x8BA1;</h1>
 <h2 id="&#x4E00;&#x3001;&#x4E1A;&#x52A1;&#x529F;&#x80FD;&#x6982;&#x8981;&#x7ED3;&#x6784;">&#x4E00;&#x3001;&#x4E1A;&#x52A1;&#x529F;&#x80FD;&#x6982;&#x8981;&#x7ED3;&#x6784;</h2>
 <h3 id="1-&#x4E2A;&#x4EBA;&#x8D26;&#x6237;&#x7BA1;&#x7406;&#x6A21;&#x5757;">1. &#x4E2A;&#x4EBA;&#x8D26;&#x6237;&#x7BA1;&#x7406;&#x6A21;&#x5757;</h3>
@@ -338,7 +444,7 @@
 2&#xFF09;&#x5E73;&#x53F0;&#x8FD0;&#x884C;&#x8FDB;&#x5165;&#x6210;&#x719F;&#x671F;&#x540E;&#xFF0C;&#x5E73;&#x53F0;&#x7ADE;&#x8D5B;&#x4FE1;&#x606F;&#x5185;&#x5BB9;&#x7531;&#x8BA4;&#x8BC1;&#x7528;&#x6237;&#x53D1;&#x5E03;&#xFF0C;&#x7BA1;&#x7406;&#x5458;&#x53EA;&#x9700;&#x5BF9;&#x8BE5;&#x90E8;&#x5206;&#x5185;&#x5BB9;&#x8FDB;&#x884C;&#x8D28;&#x91CF;&#x68C0;&#x67E5;&#x548C;&#x7EF4;&#x62A4;
 &#x200B;</p>
 <h4 id="62-&#x5E73;&#x53F0;&#x8BA8;&#x8BBA;&#x533A;&#x7BA1;&#x7406;">6.2 &#x5E73;&#x53F0;&#x8BA8;&#x8BBA;&#x533A;&#x7BA1;&#x7406;</h4>
-<p>&#x5E73;&#x53F0;&#x7BA1;&#x7406;&#x5458;&#x53D1;&#x73B0;&#x4E3B;&#x9898;&#x5E16;&#x6216;&#x56DE;&#x590D;&#x6709;&#x8FDD;&#x89C4;&#x5185;&#x5BB9;&#x53EF;&#x4EE5;&#x5C06;&#x5176;&#x5220;&#x9664;</p>
+<p>&#x5E73;&#x53F0;&#x7BA1;&#x7406;&#x5458;&#x53D1;&#x73B0;&#x4E3B;&#x9898;&#x5E16;&#x6216;&#x56DE;&#x590D;&#x6709;&#x8FDD;&#x89C4;&#x5185;&#x5BB9;&#x53EF;&#x4EE5;&#x5C06;&#x5176;&#x5220;&#x9664;&#xFF0C;&#x4E5F;&#x53EF;&#x5BF9;&#x76F8;&#x5173;&#x5E16;&#x5B50;&#x8FDB;&#x884C;&#x52A0;&#x7CBE;&#x3002;</p>
 
                                 
                                 </section>
@@ -366,10 +472,14 @@
 
             
                 
-                <a href="requirementDoc.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 项目需求文档">
+                <a href="requirementDoc.html" class="navigation navigation-prev " aria-label="Previous page: 项目需求文档">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
+                
+                <a href="IContest数据库设计文档v1.1.html" class="navigation navigation-next " aria-label="Next page: 数据库文档">
+                    <i class="fa fa-angle-right"></i>
+                </a>
                 
             
         
@@ -378,7 +488,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"项目设计文档","level":"1.3","depth":1,"previous":{"title":"项目需求文档","level":"1.2","depth":1,"path":"requirementDoc.md","ref":"requirementDoc.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters"],"pluginsConfig":{"theme-default":{"showLevel":true,"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"expandable-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"IContest系统设计文档.md","mtime":"2021-09-29T01:51:21.717Z","type":"markdown"},"gitbook":{"version":"3.0.0","time":"2021-09-29T02:05:41.311Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"项目设计文档","level":"1.3","depth":1,"next":{"title":"数据库文档","level":"1.4","depth":1,"path":"IContest数据库设计文档v1.1.html","ref":"IContest数据库设计文档v1.1.html","articles":[]},"previous":{"title":"项目需求文档","level":"1.2","depth":1,"path":"requirementDoc.md","ref":"requirementDoc.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters","page-treeview"],"pluginsConfig":{"page-treeview":{"copyright":"Copyright &#169; aleen42","minHeaderCount":"2","minHeaderDeep":"5","collapsed":false},"theme-default":{"showLevel":true,"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"expandable-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"IContest系统设计文档.md","mtime":"2021-10-12T02:53:09.918Z","type":"markdown"},"gitbook":{"version":"3.0.0","time":"2021-10-12T02:54:03.319Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

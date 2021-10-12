@@ -1,0 +1,1200 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <title>数据库文档 · GitBook</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.0.0">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-page-treeview/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="IContest系统设计文档.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                        <b>1.1.</b>
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="requirementDoc.html">
+            
+                <a href="requirementDoc.html">
+            
+                    
+                        <b>1.2.</b>
+                    
+                    项目需求文档
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="IContest系统设计文档.html">
+            
+                <a href="IContest系统设计文档.html">
+            
+                    
+                        <b>1.3.</b>
+                    
+                    项目设计文档
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4" data-path="IContest数据库设计文档v1.1.html">
+            
+                <a href="IContest数据库设计文档v1.1.html">
+            
+                    
+                        <b>1.4.</b>
+                    
+                    数据库文档
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >数据库文档</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x6570;&#x636E;&#x5E93;&#x8BBE;&#x8BA1;&#x6587;&#x6863;">&#x6570;&#x636E;&#x5E93;&#x8BBE;&#x8BA1;&#x6587;&#x6863;</h1>
+<p><strong>&#x6570;&#x636E;&#x5E93;&#x540D;&#xFF1A;</strong> icontestdb</p>
+<p><strong>&#x6587;&#x6863;&#x7248;&#x672C;&#xFF1A;</strong> 1.1</p>
+<p><strong>&#x6587;&#x6863;&#x63CF;&#x8FF0;&#xFF1A;</strong> IContest&#x6570;&#x636E;&#x5E93;&#x8BBE;&#x8BA1;&#x6587;&#x6863;v1.1</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">&#x8868;&#x540D;</th>
+<th style="text-align:center">&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><a href="#collection">collection</a></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center"><a href="#contest">contest</a></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center"><a href="#contest_board">contest_board</a></td>
+<td style="text-align:center">&#x7ADE;&#x8D5B;&#x6D3B;&#x52A8;&#x516C;&#x544A;&#x680F;</td>
+</tr>
+<tr>
+<td style="text-align:center"><a href="#reply">reply</a></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center"><a href="#sys_role">sys_role</a></td>
+<td style="text-align:center">&#x89D2;&#x8272;&#x4FE1;&#x606F;&#x8868;</td>
+</tr>
+<tr>
+<td style="text-align:center"><a href="#sys_user">sys_user</a></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center"><a href="#team">team</a></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center"><a href="#team_user">team_user</a></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center"><a href="#topic">topic</a></td>
+</tr>
+</tbody>
+</table>
+<p><strong>&#x8868;&#x540D;&#xFF1A;</strong> <a id="collection">collection</a></p>
+<p><strong>&#x8BF4;&#x660E;&#xFF1A;</strong> </p>
+<p><strong>&#x6570;&#x636E;&#x5217;&#xFF1A;</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">&#x5E8F;&#x53F7;</th>
+<th style="text-align:center">&#x540D;&#x79F0;</th>
+<th style="text-align:center">&#x6570;&#x636E;&#x7C7B;&#x578B;</th>
+<th style="text-align:center">&#x957F;&#x5EA6;</th>
+<th style="text-align:center">&#x5C0F;&#x6570;&#x4F4D;</th>
+<th style="text-align:center">&#x5141;&#x8BB8;&#x7A7A;&#x503C;</th>
+<th style="text-align:center">&#x4E3B;&#x952E;</th>
+<th style="text-align:center">&#x9ED8;&#x8BA4;&#x503C;</th>
+<th style="text-align:center">&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">id</td>
+<td style="text-align:center">int</td>
+<td style="text-align:center">10</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">N</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">2</td>
+<td style="text-align:center">user_id</td>
+<td style="text-align:center">int</td>
+<td style="text-align:center">10</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:center">N</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">&#x5916;&#x952E;&#xFF0C;&#x7528;&#x6237;id</td>
+</tr>
+<tr>
+<td style="text-align:center">3</td>
+<td style="text-align:center">obj_id</td>
+<td style="text-align:center">int</td>
+<td style="text-align:center">10</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:center">N</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">&#x6536;&#x85CF;&#x5BF9;&#x8C61;id&#xFF0C;&#x53EF;&#x4EE5;&#x662F;contest&#x6216;topic</td>
+</tr>
+<tr>
+<td style="text-align:center">4</td>
+<td style="text-align:center">create_time</td>
+<td style="text-align:center">timestamp</td>
+<td style="text-align:center">19</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:center">N</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">5</td>
+<td style="text-align:center">update_time</td>
+<td style="text-align:center">timestamp</td>
+<td style="text-align:center">19</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:center">N</td>
+<td style="text-align:center"></td>
+</tr>
+</tbody>
+</table>
+<p><strong>&#x8868;&#x540D;&#xFF1A;</strong> <a id="contest">contest</a></p>
+<p><strong>&#x8BF4;&#x660E;&#xFF1A;</strong> </p>
+<p><strong>&#x6570;&#x636E;&#x5217;&#xFF1A;</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">&#x5E8F;&#x53F7;</th>
+<th style="text-align:center">&#x540D;&#x79F0;</th>
+<th style="text-align:center">&#x6570;&#x636E;&#x7C7B;&#x578B;</th>
+<th style="text-align:center">&#x957F;&#x5EA6;</th>
+<th style="text-align:center">&#x5C0F;&#x6570;&#x4F4D;</th>
+<th style="text-align:center">&#x5141;&#x8BB8;&#x7A7A;&#x503C;</th>
+<th style="text-align:center">&#x4E3B;&#x952E;</th>
+<th style="text-align:center">&#x9ED8;&#x8BA4;&#x503C;</th>
+<th style="text-align:center">&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">id</td>
+<td style="text-align:center">int</td>
+<td style="text-align:center">10</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">N</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">2</td>
+<td style="text-align:center">title</td>
+<td style="text-align:center">varchar</td>
+<td style="text-align:center">255</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:center">N</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">&#x6807;&#x9898;</td>
+</tr>
+<tr>
+<td style="text-align:center">3</td>
+<td style="text-align:center">digest</td>
+<td style="text-align:center">varchar</td>
+<td style="text-align:center">255</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:center">N</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">&#x6458;&#x8981;</td>
+</tr>
+<tr>
+<td style="text-align:center">4</td>
+<td style="text-align:center">url</td>
+<td style="text-align:center">varchar</td>
+<td style="text-align:center">255</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:center">N</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">&#x539F;&#x6587;&#x94FE;&#x63A5;url</td>
+</tr>
+<tr>
+<td style="text-align:center">5</td>
+<td style="text-align:center">cover_url</td>
+<td style="text-align:center">varchar</td>
+<td style="text-align:center">255</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:center">N</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">&#x5C01;&#x9762;&#x56FE;&#x7247;url</td>
+</tr>
+<tr>
+<td style="text-align:center">6</td>
+<td style="text-align:center">gmt_create</td>
+<td style="text-align:center">datetime</td>
+<td style="text-align:center">19</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:center">N</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">&#x521B;&#x5EFA;&#x65F6;&#x95F4;</td>
+</tr>
+<tr>
+<td style="text-align:center">7</td>
+<td style="text-align:center">gmt_modified</td>
+<td style="text-align:center">datetime</td>
+<td style="text-align:center">19</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:center">N</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">&#x4FEE;&#x6539;&#x65F6;&#x95F4;</td>
+</tr>
+<tr>
+<td style="text-align:center">8</td>
+<td style="text-align:center">type</td>
+<td style="text-align:center">tinyint</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:center">N</td>
+<td style="text-align:center"></td>
+</tr>
+</tbody>
+</table>
+<p><strong>&#x8868;&#x540D;&#xFF1A;</strong> <a id="contest_board">contest_board</a></p>
+<p><strong>&#x8BF4;&#x660E;&#xFF1A;</strong> &#x7ADE;&#x8D5B;&#x6D3B;&#x52A8;&#x516C;&#x544A;&#x680F;</p>
+<p><strong>&#x6570;&#x636E;&#x5217;&#xFF1A;</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">&#x5E8F;&#x53F7;</th>
+<th style="text-align:center">&#x540D;&#x79F0;</th>
+<th style="text-align:center">&#x6570;&#x636E;&#x7C7B;&#x578B;</th>
+<th style="text-align:center">&#x957F;&#x5EA6;</th>
+<th style="text-align:center">&#x5C0F;&#x6570;&#x4F4D;</th>
+<th style="text-align:center">&#x5141;&#x8BB8;&#x7A7A;&#x503C;</th>
+<th style="text-align:center">&#x4E3B;&#x952E;</th>
+<th style="text-align:center">&#x9ED8;&#x8BA4;&#x503C;</th>
+<th style="text-align:center">&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">id</td>
+<td style="text-align:center">int</td>
+<td style="text-align:center">10</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">N</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">2</td>
+<td style="text-align:center">contest_id</td>
+<td style="text-align:center">int</td>
+<td style="text-align:center">10</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:center">N</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">3</td>
+<td style="text-align:center">content</td>
+<td style="text-align:center">varchar</td>
+<td style="text-align:center">255</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:center">N</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">&#x516C;&#x544A;&#x5185;&#x5BB9;</td>
+</tr>
+<tr>
+<td style="text-align:center">4</td>
+<td style="text-align:center">title</td>
+<td style="text-align:center">varchar</td>
+<td style="text-align:center">255</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:center">N</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">&#x516C;&#x544A;&#x6807;&#x9898;</td>
+</tr>
+<tr>
+<td style="text-align:center">5</td>
+<td style="text-align:center">user_id</td>
+<td style="text-align:center">int</td>
+<td style="text-align:center">10</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:center">N</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">6</td>
+<td style="text-align:center">create_time</td>
+<td style="text-align:center">timestamp</td>
+<td style="text-align:center">19</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:center">N</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">7</td>
+<td style="text-align:center">update_time</td>
+<td style="text-align:center">timestamp</td>
+<td style="text-align:center">19</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:center">N</td>
+<td style="text-align:center"></td>
+</tr>
+</tbody>
+</table>
+<p><strong>&#x8868;&#x540D;&#xFF1A;</strong> <a id="reply">reply</a></p>
+<p><strong>&#x8BF4;&#x660E;&#xFF1A;</strong> </p>
+<p><strong>&#x6570;&#x636E;&#x5217;&#xFF1A;</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">&#x5E8F;&#x53F7;</th>
+<th style="text-align:center">&#x540D;&#x79F0;</th>
+<th style="text-align:center">&#x6570;&#x636E;&#x7C7B;&#x578B;</th>
+<th style="text-align:center">&#x957F;&#x5EA6;</th>
+<th style="text-align:center">&#x5C0F;&#x6570;&#x4F4D;</th>
+<th style="text-align:center">&#x5141;&#x8BB8;&#x7A7A;&#x503C;</th>
+<th style="text-align:center">&#x4E3B;&#x952E;</th>
+<th style="text-align:center">&#x9ED8;&#x8BA4;&#x503C;</th>
+<th style="text-align:center">&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">id</td>
+<td style="text-align:center">int</td>
+<td style="text-align:center">10</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">N</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">2</td>
+<td style="text-align:center">topic_id</td>
+<td style="text-align:center">int</td>
+<td style="text-align:center">10</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">N</td>
+<td style="text-align:center">N</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">&#x56DE;&#x590D;&#x4E3B;&#x9898;&#x5E16;id</td>
+</tr>
+<tr>
+<td style="text-align:center">3</td>
+<td style="text-align:center">reply_user_id</td>
+<td style="text-align:center">int</td>
+<td style="text-align:center">10</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">N</td>
+<td style="text-align:center">N</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">&#x7528;&#x6237;id</td>
+</tr>
+<tr>
+<td style="text-align:center">4</td>
+<td style="text-align:center">to_reply_id</td>
+<td style="text-align:center">int</td>
+<td style="text-align:center">10</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:center">N</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">&#x56DE;&#x590D;&#x7684;&#x8BC4;&#x8BBA;id&#xFF0C;&#x82E5;&#x4E3A;&#x56DE;&#x590D;&#x4E3B;&#x9898;&#x5E16;&#x5219;&#x7F6E;0</td>
+</tr>
+<tr>
+<td style="text-align:center">5</td>
+<td style="text-align:center">content</td>
+<td style="text-align:center">text</td>
+<td style="text-align:center">65535</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:center">N</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">6</td>
+<td style="text-align:center">create_time</td>
+<td style="text-align:center">timestamp</td>
+<td style="text-align:center">19</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:center">N</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">7</td>
+<td style="text-align:center">update_time</td>
+<td style="text-align:center">timestamp</td>
+<td style="text-align:center">19</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:center">N</td>
+<td style="text-align:center"></td>
+</tr>
+</tbody>
+</table>
+<p><strong>&#x8868;&#x540D;&#xFF1A;</strong> <a id="sys_role">sys_role</a></p>
+<p><strong>&#x8BF4;&#x660E;&#xFF1A;</strong> &#x89D2;&#x8272;&#x4FE1;&#x606F;&#x8868;</p>
+<p><strong>&#x6570;&#x636E;&#x5217;&#xFF1A;</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">&#x5E8F;&#x53F7;</th>
+<th style="text-align:center">&#x540D;&#x79F0;</th>
+<th style="text-align:center">&#x6570;&#x636E;&#x7C7B;&#x578B;</th>
+<th style="text-align:center">&#x957F;&#x5EA6;</th>
+<th style="text-align:center">&#x5C0F;&#x6570;&#x4F4D;</th>
+<th style="text-align:center">&#x5141;&#x8BB8;&#x7A7A;&#x503C;</th>
+<th style="text-align:center">&#x4E3B;&#x952E;</th>
+<th style="text-align:center">&#x9ED8;&#x8BA4;&#x503C;</th>
+<th style="text-align:center">&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">id</td>
+<td style="text-align:center">bigint</td>
+<td style="text-align:center">20</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">N</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">&#x89D2;&#x8272;ID</td>
+</tr>
+<tr>
+<td style="text-align:center">2</td>
+<td style="text-align:center">role_name</td>
+<td style="text-align:center">varchar</td>
+<td style="text-align:center">30</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">N</td>
+<td style="text-align:center">N</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">&#x89D2;&#x8272;&#x540D;&#x79F0;</td>
+</tr>
+<tr>
+<td style="text-align:center">3</td>
+<td style="text-align:center">role_key</td>
+<td style="text-align:center">varchar</td>
+<td style="text-align:center">100</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">N</td>
+<td style="text-align:center">N</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">&#x89D2;&#x8272;&#x6743;&#x9650;&#x5B57;&#x7B26;&#x4E32;</td>
+</tr>
+<tr>
+<td style="text-align:center">4</td>
+<td style="text-align:center">status</td>
+<td style="text-align:center">tinyint</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">N</td>
+<td style="text-align:center">N</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">&#x89D2;&#x8272;&#x72B6;&#x6001;&#xFF08;0&#x6B63;&#x5E38;1&#x505C;&#x7528;&#xFF09;</td>
+</tr>
+<tr>
+<td style="text-align:center">5</td>
+<td style="text-align:center">is_deleted</td>
+<td style="text-align:center">tinyint</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:center">N</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">&#x5220;&#x9664;&#x6807;&#x5FD7;&#xFF08;0&#x4EE3;&#x8868;&#x5B58;&#x5728;1&#x4EE3;&#x8868;&#x5220;&#x9664;&#xFF09;</td>
+</tr>
+<tr>
+<td style="text-align:center">6</td>
+<td style="text-align:center">create_by</td>
+<td style="text-align:center">varchar</td>
+<td style="text-align:center">64</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:center">N</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">&#x521B;&#x5EFA;&#x8005;</td>
+</tr>
+<tr>
+<td style="text-align:center">7</td>
+<td style="text-align:center">remark</td>
+<td style="text-align:center">varchar</td>
+<td style="text-align:center">500</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:center">N</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">&#x5907;&#x6CE8;</td>
+</tr>
+<tr>
+<td style="text-align:center">8</td>
+<td style="text-align:center">gmt_create</td>
+<td style="text-align:center">datetime</td>
+<td style="text-align:center">19</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:center">N</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">&#x521B;&#x5EFA;&#x65F6;&#x95F4;</td>
+</tr>
+<tr>
+<td style="text-align:center">9</td>
+<td style="text-align:center">gmt_update</td>
+<td style="text-align:center">datetime</td>
+<td style="text-align:center">19</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:center">N</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">&#x66F4;&#x65B0;&#x65F6;&#x95F4;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>&#x8868;&#x540D;&#xFF1A;</strong> <a id="sys_user">sys_user</a></p>
+<p><strong>&#x8BF4;&#x660E;&#xFF1A;</strong> </p>
+<p><strong>&#x6570;&#x636E;&#x5217;&#xFF1A;</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">&#x5E8F;&#x53F7;</th>
+<th style="text-align:center">&#x540D;&#x79F0;</th>
+<th style="text-align:center">&#x6570;&#x636E;&#x7C7B;&#x578B;</th>
+<th style="text-align:center">&#x957F;&#x5EA6;</th>
+<th style="text-align:center">&#x5C0F;&#x6570;&#x4F4D;</th>
+<th style="text-align:center">&#x5141;&#x8BB8;&#x7A7A;&#x503C;</th>
+<th style="text-align:center">&#x4E3B;&#x952E;</th>
+<th style="text-align:center">&#x9ED8;&#x8BA4;&#x503C;</th>
+<th style="text-align:center">&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">id</td>
+<td style="text-align:center">int</td>
+<td style="text-align:center">10</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">N</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">&#x7528;&#x6237;&#x8868;&#x4E3B;&#x952E;</td>
+</tr>
+<tr>
+<td style="text-align:center">2</td>
+<td style="text-align:center">username</td>
+<td style="text-align:center">varchar</td>
+<td style="text-align:center">255</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:center">N</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">&#x7528;&#x6237;&#x540D;</td>
+</tr>
+<tr>
+<td style="text-align:center">3</td>
+<td style="text-align:center">password</td>
+<td style="text-align:center">varchar</td>
+<td style="text-align:center">255</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:center">N</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">&#x5BC6;&#x7801;</td>
+</tr>
+<tr>
+<td style="text-align:center">4</td>
+<td style="text-align:center">email</td>
+<td style="text-align:center">varchar</td>
+<td style="text-align:center">255</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:center">N</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">&#x90AE;&#x7BB1;</td>
+</tr>
+<tr>
+<td style="text-align:center">5</td>
+<td style="text-align:center">qq</td>
+<td style="text-align:center">varchar</td>
+<td style="text-align:center">20</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:center">N</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">qq&#x53F7;</td>
+</tr>
+<tr>
+<td style="text-align:center">6</td>
+<td style="text-align:center">credit</td>
+<td style="text-align:center">int</td>
+<td style="text-align:center">10</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:center">N</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">&#x79EF;&#x5206;</td>
+</tr>
+<tr>
+<td style="text-align:center">7</td>
+<td style="text-align:center">avatar</td>
+<td style="text-align:center">varchar</td>
+<td style="text-align:center">255</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:center">N</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">&#x5934;&#x50CF;url</td>
+</tr>
+<tr>
+<td style="text-align:center">8</td>
+<td style="text-align:center">gmt_create</td>
+<td style="text-align:center">datetime</td>
+<td style="text-align:center">19</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:center">N</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">&#x521B;&#x5EFA;&#x65F6;&#x95F4;</td>
+</tr>
+<tr>
+<td style="text-align:center">9</td>
+<td style="text-align:center">gmt_modified</td>
+<td style="text-align:center">datetime</td>
+<td style="text-align:center">19</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:center">N</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">&#x4FEE;&#x6539;&#x65F6;&#x95F4;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>&#x8868;&#x540D;&#xFF1A;</strong> <a id="team">team</a></p>
+<p><strong>&#x8BF4;&#x660E;&#xFF1A;</strong> </p>
+<p><strong>&#x6570;&#x636E;&#x5217;&#xFF1A;</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">&#x5E8F;&#x53F7;</th>
+<th style="text-align:center">&#x540D;&#x79F0;</th>
+<th style="text-align:center">&#x6570;&#x636E;&#x7C7B;&#x578B;</th>
+<th style="text-align:center">&#x957F;&#x5EA6;</th>
+<th style="text-align:center">&#x5C0F;&#x6570;&#x4F4D;</th>
+<th style="text-align:center">&#x5141;&#x8BB8;&#x7A7A;&#x503C;</th>
+<th style="text-align:center">&#x4E3B;&#x952E;</th>
+<th style="text-align:center">&#x9ED8;&#x8BA4;&#x503C;</th>
+<th style="text-align:center">&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">id</td>
+<td style="text-align:center">int</td>
+<td style="text-align:center">10</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">N</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">2</td>
+<td style="text-align:center">name</td>
+<td style="text-align:center">varchar</td>
+<td style="text-align:center">255</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:center">N</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">&#x961F;&#x4F0D;&#x540D;&#x79F0;</td>
+</tr>
+<tr>
+<td style="text-align:center">3</td>
+<td style="text-align:center">type</td>
+<td style="text-align:center">varchar</td>
+<td style="text-align:center">255</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:center">N</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">&#x961F;&#x4F0D;&#x7C7B;&#x578B;</td>
+</tr>
+<tr>
+<td style="text-align:center">4</td>
+<td style="text-align:center">info</td>
+<td style="text-align:center">varchar</td>
+<td style="text-align:center">255</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:center">N</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">&#x961F;&#x4F0D;&#x4FE1;&#x606F;</td>
+</tr>
+<tr>
+<td style="text-align:center">5</td>
+<td style="text-align:center">gmt_create</td>
+<td style="text-align:center">datetime</td>
+<td style="text-align:center">19</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:center">N</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">&#x521B;&#x5EFA;&#x65F6;&#x95F4;</td>
+</tr>
+<tr>
+<td style="text-align:center">6</td>
+<td style="text-align:center">gmt_modified</td>
+<td style="text-align:center">datetime</td>
+<td style="text-align:center">19</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:center">N</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">&#x4FEE;&#x6539;&#x65F6;&#x95F4;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>&#x8868;&#x540D;&#xFF1A;</strong> <a id="team_user">team_user</a></p>
+<p><strong>&#x8BF4;&#x660E;&#xFF1A;</strong> </p>
+<p><strong>&#x6570;&#x636E;&#x5217;&#xFF1A;</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">&#x5E8F;&#x53F7;</th>
+<th style="text-align:center">&#x540D;&#x79F0;</th>
+<th style="text-align:center">&#x6570;&#x636E;&#x7C7B;&#x578B;</th>
+<th style="text-align:center">&#x957F;&#x5EA6;</th>
+<th style="text-align:center">&#x5C0F;&#x6570;&#x4F4D;</th>
+<th style="text-align:center">&#x5141;&#x8BB8;&#x7A7A;&#x503C;</th>
+<th style="text-align:center">&#x4E3B;&#x952E;</th>
+<th style="text-align:center">&#x9ED8;&#x8BA4;&#x503C;</th>
+<th style="text-align:center">&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">id</td>
+<td style="text-align:center">int</td>
+<td style="text-align:center">10</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">N</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">2</td>
+<td style="text-align:center">team_id</td>
+<td style="text-align:center">int</td>
+<td style="text-align:center">10</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:center">N</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">team&#x8868;&#x7684;id</td>
+</tr>
+<tr>
+<td style="text-align:center">3</td>
+<td style="text-align:center">user_id</td>
+<td style="text-align:center">int</td>
+<td style="text-align:center">10</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:center">N</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">user&#x8868;&#x7684;id</td>
+</tr>
+<tr>
+<td style="text-align:center">4</td>
+<td style="text-align:center">username</td>
+<td style="text-align:center">varchar</td>
+<td style="text-align:center">255</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:center">N</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">&#x7528;&#x6237;&#x540D;&#xFF0C;&#x5197;&#x4F59;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>&#x8868;&#x540D;&#xFF1A;</strong> <a id="topic">topic</a></p>
+<p><strong>&#x8BF4;&#x660E;&#xFF1A;</strong> </p>
+<p><strong>&#x6570;&#x636E;&#x5217;&#xFF1A;</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">&#x5E8F;&#x53F7;</th>
+<th style="text-align:center">&#x540D;&#x79F0;</th>
+<th style="text-align:center">&#x6570;&#x636E;&#x7C7B;&#x578B;</th>
+<th style="text-align:center">&#x957F;&#x5EA6;</th>
+<th style="text-align:center">&#x5C0F;&#x6570;&#x4F4D;</th>
+<th style="text-align:center">&#x5141;&#x8BB8;&#x7A7A;&#x503C;</th>
+<th style="text-align:center">&#x4E3B;&#x952E;</th>
+<th style="text-align:center">&#x9ED8;&#x8BA4;&#x503C;</th>
+<th style="text-align:center">&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">id</td>
+<td style="text-align:center">int</td>
+<td style="text-align:center">10</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">N</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">&#x5E16;&#x5B50;ID</td>
+</tr>
+<tr>
+<td style="text-align:center">2</td>
+<td style="text-align:center">user_id</td>
+<td style="text-align:center">int</td>
+<td style="text-align:center">10</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">N</td>
+<td style="text-align:center">N</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">&#x53D1;&#x5E16;&#x4EBA;id</td>
+</tr>
+<tr>
+<td style="text-align:center">3</td>
+<td style="text-align:center">title</td>
+<td style="text-align:center">varchar</td>
+<td style="text-align:center">200</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:center">N</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">&#x6807;&#x9898;</td>
+</tr>
+<tr>
+<td style="text-align:center">4</td>
+<td style="text-align:center">content</td>
+<td style="text-align:center">text</td>
+<td style="text-align:center">65535</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:center">N</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">&#x5185;&#x5BB9;</td>
+</tr>
+<tr>
+<td style="text-align:center">5</td>
+<td style="text-align:center">click</td>
+<td style="text-align:center">int</td>
+<td style="text-align:center">10</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:center">N</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">&#x70B9;&#x51FB;&#x91CF;</td>
+</tr>
+<tr>
+<td style="text-align:center">6</td>
+<td style="text-align:center">tab</td>
+<td style="text-align:center">varchar</td>
+<td style="text-align:center">100</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:center">N</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">&#x6807;&#x7B7E;&#x7C7B;&#x578B;</td>
+</tr>
+<tr>
+<td style="text-align:center">7</td>
+<td style="text-align:center">gmt_create</td>
+<td style="text-align:center">datetime</td>
+<td style="text-align:center">19</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:center">N</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">&#x521B;&#x5EFA;&#x65F6;&#x95F4;</td>
+</tr>
+<tr>
+<td style="text-align:center">8</td>
+<td style="text-align:center">gmt_modified</td>
+<td style="text-align:center">datetime</td>
+<td style="text-align:center">19</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:center">N</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">&#x4FEE;&#x6539;&#x65F6;&#x95F4;</td>
+</tr>
+</tbody>
+</table>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="IContest系统设计文档.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 项目设计文档">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"数据库文档","level":"1.4","depth":1,"previous":{"title":"项目设计文档","level":"1.3","depth":1,"path":"IContest系统设计文档.md","ref":"IContest系统设计文档.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters","page-treeview"],"pluginsConfig":{"page-treeview":{"copyright":"Copyright &#169; aleen42","minHeaderCount":"2","minHeaderDeep":"5","collapsed":false},"theme-default":{"showLevel":true,"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"expandable-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"IContest数据库设计文档v1.1.md","mtime":"2021-10-12T02:37:02.386Z","type":"markdown"},"gitbook":{"version":"3.0.0","time":"2021-10-12T03:14:51.296Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/buttons.js"></script>
+        
+    
+
+    </body>
+</html>
+
