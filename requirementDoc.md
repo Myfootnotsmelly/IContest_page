@@ -26,8 +26,22 @@
 ## 2.1开发周期
 | 目标 | 开始时间 | 预计时间 | 结束日期 | 是否完成 |
 | --- | --- | --- | --- | --- |
-| 需求分析 | 2021-9-10 | 14天 | 2021-9-22 |√|
+| 需求分析 | 2021-9-10 | 14天 | 2021-9-22 |
+- [x] 
 
+ |
+| 开发 |  |  |  | 
+- [ ] 
+
+ |
+| 测试 |  |  |  | 
+- [ ] 
+
+ |
+| 上线 |  |  |  | 
+- [ ] 
+
+ |
 
 ### 2.2 项目背景
 A. 项目名称: IContest
@@ -46,11 +60,8 @@ F. 项目简介:
 
 # 三、系统用例概述
 ### 
-
 ## 1.用例图
-
-![用例图](https://raw.githubusercontent.com/Myfootnotsmelly/IContest_page/main/img/usecase.jpg)
-
+![用例图.jpg](https://raw.githubusercontent.com/Myfootnotsmelly/IContest_page/main/img/usecase.jpg)
 ## 2.用例的概要描述
 | 参与者​ | **需求** | **简要说明** | **优先级** |
 | --- | --- | --- | --- |
